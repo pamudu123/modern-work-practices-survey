@@ -20,13 +20,16 @@ Responses are anonymous. If you opt in to receive the final report, your email i
 
 ![Introduction](resources/intro.png)
 
-![Section 2.1](resources/sec2.1.png)
-
-![Section 2.2](resources/sec2.2.png)
-
-![Section 2.3](resources/sec2.3.png)
-
-![Section 3](resources/sec3.png)
+<table>
+  <tr>
+    <td><img src="resources/sec2.1.png" alt="Section 2.1" width="100%" /></td>
+    <td><img src="resources/sec2.2.png" alt="Section 2.2" width="100%" /></td>
+  </tr>
+  <tr>
+    <td><img src="resources/sec2.3.png" alt="Section 2.3" width="100%" /></td>
+    <td><img src="resources/sec3.png" alt="Section 3" width="100%" /></td>
+  </tr>
+</table>
 
 ## For Teams & Organizations
 Interested in running a similar survey for your team or organization? I am happy to analyze and share results with actionable recommendations. 

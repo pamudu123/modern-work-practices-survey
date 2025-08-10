@@ -122,7 +122,8 @@ The application will present a questionnaire divided into the following sections
     * If any required questions are unanswered, a clear error message should appear, prompting the user to complete the form. The unanswered questions should be highlighted.
 
 4.  **Data Storage:**
-    * Upon successful submission, all user responses should be saved as a new record in an Excel file (`.xlsx`) on the server.
+    * Responses are submitted to a Google Apps Script Web App and stored in Google Sheets.
+    * The Thank You page may show a simple total submissions count.
 
 5.  **Confirmation/Thank You Page:**
     * After successful submission, the user must be navigated to a new page or window that displays a "Thank You" message.
