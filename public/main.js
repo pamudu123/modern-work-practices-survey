@@ -10,6 +10,12 @@ function findAncestor(el, selector){
   return null;
 }
 
+function isValidEmail(email){
+  // Simple and robust email pattern for client-side checks
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  return emailPattern.test(String(email).trim());
+}
+
 function validateForm(form){
   let valid = true;
   const errorElements = form.querySelectorAll('.error');
@@ -62,6 +68,16 @@ function validateForm(form){
       valid = false;
       const error = form.querySelector('[data-error-for="email"]');
       if (error) error.textContent = 'Email is required when choosing Yes.';
+      emailInput.classList.add('highlight-missing');
+    }
+  }
+
+  // If an email is provided (optional or required), validate format
+  if (emailInput && emailInput.value) {
+    if (!isValidEmail(emailInput.value)) {
+      valid = false;
+      const error = form.querySelector('[data-error-for="email"]');
+      if (error) error.textContent = 'Please enter a valid email address.';
       emailInput.classList.add('highlight-missing');
     }
   }
@@ -240,6 +256,15 @@ document.addEventListener('DOMContentLoaded', () => {
       if (target.value) {
         const forName = target.id || target.name;
         const err = document.querySelector(`[data-error-for="${forName}"]`);
+        // Special handling for email format while typing
+        if (target.id === 'email') {
+          if (!isValidEmail(target.value)) {
+            if (err) err.textContent = 'Please enter a valid email address.';
+            target.classList.add('highlight-missing');
+            container.classList.remove('answered');
+            return;
+          }
+        }
         if (err) err.textContent = '';
         target.classList.remove('highlight-missing');
         container.classList.add('answered');
