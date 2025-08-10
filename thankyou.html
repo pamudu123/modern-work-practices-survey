@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You</title>
+    <link rel="stylesheet" href="public/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Thank You</h1>
+      </header>
+      <p>Thank you for participating.</p>
+      <div id="participants" class="stat-card" style="display:none">
+        <div class="stat-number" id="participantCount">0</div>
+        <div class="stat-label">Total participants so far</div>
+      </div>
+      <div class="notice">
+        <p><strong>Interested in running a similar survey for your team or organization?</strong></p>
+        <p>I’ll conduct the analysis and share the results along with actionable recommendations.</p>
+        <p>📧 Email me at <a href="mailto:pamuduranasinghe9@gmail.com">pamuduranasinghe9@gmail.com</a><br/>
+        🔗 Connect on LinkedIn: <a href="https://www.linkedin.com/in/pamudu-ranasinghe/" target="_blank" rel="noopener noreferrer">linkedin.com/in/pamudu-ranasinghe</a></p>
+      </div>
+      <div class="actions">
+        <a class="submit" href="index.html">Back to form</a>
+      </div>
+    </div>
+    <script src="public/config.js"></script>
+    <script>
+      async function loadCount(){
+        if (!window.APPS_SCRIPT_URL) return;
+        try{
+          const res = await fetch(window.APPS_SCRIPT_URL + '?mode=count');
+          const data = await res.json();
+          if (typeof data.count === 'number'){
+            document.getElementById('participantCount').textContent = data.count;
+            document.getElementById('participants').style.display = 'inline-block';
+          }
+        }catch(e){ /* ignore */ }
+      }
+      loadCount();
+    </script>
+  </body>
+  </html>
+
+

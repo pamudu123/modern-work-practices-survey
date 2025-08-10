@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work-Life Balance & Modern Work Practices Questionnaire</title>
+    <link rel="stylesheet" href="public/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Work-Life Balance & Modern Work Practices Questionnaire</h1>
+      </header>
+      <section class="notice">
+        <p>👋 <strong>Welcome, and thank you for your time!</strong></p>
+        <p>This survey aims to understand how work-life balance is experienced in today’s modern work environment. 🧑‍💻🏡</p>
+        <p>
+          It is based on the <em>Work-Life Balance Scale</em> by J. Hayman (2005) 📊 and has been updated with new questions to reflect current practices and challenges in 2025. 🔄
+        </p>
+        <p><strong>🔒 Your responses are completely anonymous and confidential.</strong><br/>
+          No email addresses or personal details are collected. All results will be analyzed in aggregate to identify general trends 📈.
+        </p>
+        <p>Please answer each question as honestly as possible ✅.<br/>
+          Your input is truly appreciated! 🙏
+        </p>
+        <p>
+          If you have any questions or concerns, feel free to contact me at
+          <a href="mailto:pamuduranasinghe9@gmail.com">pamuduranasinghe9@gmail.com</a> 📧.
+        </p>
+      </section>
+      <div class="illustration">
+        <img src="resources/intro.png" alt="Introduction" onerror="this.parentElement.style.display='none'" />
+      </div>
+
+      <form id="surveyForm" novalidate>
+        <!-- Section 1: General Questions -->
+        <section class="section" data-section>
+          <button type="button" class="section-title" data-toggle>
+            Section 1: General Questions
+          </button>
+          <div class="section-content">
+            <div class="field" data-radio-with-other>
+              <label>Which department do you work in? <span class="req">*</span></label>
+              <div class="options">
+                <label><input type="radio" name="general_department" value="IT / Technology / Engineering" required /> IT / Technology / Engineering</label>
+                <label><input type="radio" name="general_department" value="Human Resources (HR)" /> Human Resources (HR)</label>
+                <label><input type="radio" name="general_department" value="Healthcare Services" /> Healthcare Services</label>
+                <label><input type="radio" name="general_department" value="Finance / Accounting" /> Finance / Accounting</label>
+                <label><input type="radio" name="general_department" value="Legal / Compliance" /> Legal / Compliance</label>
+                <label><input type="radio" name="general_department" value="Sales / Business Development" /> Sales / Business Development</label>
+                <label><input type="radio" name="general_department" value="Supply Chain / Procurement / Logistics" /> Supply Chain / Procurement / Logistics</label>
+                <label><input type="radio" name="general_department" value="Other" /> Other</label>
+              </div>
+              <div class="other-field" id="departmentOtherField" hidden>
+                <input type="text" id="departmentOther" name="general_departmentOther" placeholder="Please specify" />
+              </div>
+              <p class="error" data-error-for="general_department"></p>
+              <p class="error" data-error-for="departmentOther"></p>
+            </div>
+            <div class="field" data-radio-with-other>
+              <label>What is your current job title/position? <span class="req">*</span></label>
+              <div class="options">
+                <label><input type="radio" name="general_jobTitle" value="Director / Head of Department" required /> Director / Head of Department</label>
+                <label><input type="radio" name="general_jobTitle" value="Manager" /> Manager</label>
+                <label><input type="radio" name="general_jobTitle" value="Team Lead / Supervisor" /> Team Lead / Supervisor</label>
+                <label><input type="radio" name="general_jobTitle" value="Engineer / Developer" /> Engineer / Developer</label>
+                <label><input type="radio" name="general_jobTitle" value="Technician / Operator" /> Technician / Operator</label>
+                <label><input type="radio" name="general_jobTitle" value="Consultant / Advisor" /> Consultant / Advisor</label>
+                <label><input type="radio" name="general_jobTitle" value="Coordinator / Administrator" /> Coordinator / Administrator</label>
+                <label><input type="radio" name="general_jobTitle" value="Sales / Business Development Representative" /> Sales / Business Development Representative</label>
+                <label><input type="radio" name="general_jobTitle" value="Customer Service / Support Representative" /> Customer Service / Support Representative</label>
+                <label><input type="radio" name="general_jobTitle" value="Designer / Creative Professional" /> Designer / Creative Professional</label>
+                <label><input type="radio" name="general_jobTitle" value="Researcher / Scientist" /> Researcher / Scientist</label>
+                <label><input type="radio" name="general_jobTitle" value="Healthcare Professional" /> Healthcare Professional</label>
+                <label><input type="radio" name="general_jobTitle" value="Educator / Trainer" /> Educator / Trainer</label>
+                <label><input type="radio" name="general_jobTitle" value="Intern / Trainee" /> Intern / Trainee</label>
+                <label><input type="radio" name="general_jobTitle" value="Other" /> Other</label>
+              </div>
+              <div class="other-field" id="jobTitleOtherField" hidden>
+                <input type="text" id="jobTitleOther" name="general_jobTitleOther" placeholder="Please specify" />
+              </div>
+              <p class="error" data-error-for="general_jobTitle"></p>
+              <p class="error" data-error-for="jobTitleOther"></p>
+            </div>
+            <fieldset class="field">
+              <legend>How many years of experience do you have in your profession? <span class="req">*</span></legend>
+              <div class="options options-inline" data-required-radio-group>
+                <label><input type="radio" name="general_experienceYears" value="Less than 1 year" required /> Less than 1 year</label>
+                <label><input type="radio" name="general_experienceYears" value="1 - 3 years" /> 1 - 3 years</label>
+                <label><input type="radio" name="general_experienceYears" value="3 - 5 years" /> 3 - 5 years</label>
+                <label><input type="radio" name="general_experienceYears" value="5 - 8 years" /> 5 - 8 years</label>
+                <label><input type="radio" name="general_experienceYears" value="8 - 12 years" /> 8 - 12 years</label>
+                <label><input type="radio" name="general_experienceYears" value="12 - 20 years" /> 12 - 20 years</label>
+                <label><input type="radio" name="general_experienceYears" value="More than 20 years" /> More than 20 years</label>
+              </div>
+              <p class="error" data-error-for="general_experienceYears"></p>
+            </fieldset>
+            <fieldset class="field">
+              <legend>What is your primary work arrangement? <span class="req">*</span></legend>
+              <div class="options options-inline" data-required-radio-group>
+                <label><input type="radio" name="general_workArrangement" value="On-site" required /> On-site</label>
+                <label><input type="radio" name="general_workArrangement" value="Fully Remote" /> Fully Remote</label>
+                <label><input type="radio" name="general_workArrangement" value="Hybrid" /> Hybrid</label>
+              </div>
+              <p class="error" data-error-for="general_workArrangement"></p>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Which of the following best describes your typical working hours? <span class="req">*</span></legend>
+              <div class="options options-inline" data-required-radio-group>
+                <label><input type="radio" name="general_workHours" value="Standard Fixed Hours" required /> Standard Fixed Hours</label>
+                <label><input type="radio" name="general_workHours" value="Fixed Time-Zone Shift" /> Fixed Time-Zone Shift</label>
+                <label><input type="radio" name="general_workHours" value="Flexible Hours" /> Flexible Hours</label>
+                <label><input type="radio" name="general_workHours" value="Rotating Shift-based Work" /> Rotating Shift-based Work</label>
+                <label><input type="radio" name="general_workHours" value="Irregular/Unpredictable Hours" /> Irregular/Unpredictable Hours</label>
+              </div>
+              <p class="error" data-error-for="general_workHours"></p>
+            </fieldset>
+          </div>
+        </section>
+
+        <!-- Section 2: Work-Life Balance Scale -->
+        <section class="section" data-section>
+          <button type="button" class="section-title" data-toggle>
+            Section 2: Work-Life Balance Scale [J. Hayman (2005)]
+          </button>
+          <div class="section-content">
+            <div class="subsection" data-subsection>
+              <button type="button" class="subsection-title" data-toggle>2.1 Work Interference with Personal Life (WIPL)</button>
+              <div class="subsection-content">
+                <div class="illustration"><img src="resources/sec2.1.png" alt="Section 2.1" onerror="this.parentElement.style.display='none'" /></div>
+                <div class="field">
+                  <label>My personal life suffers because of my work. <span class="req">*</span></label>
+                  <div class="options options-inline" data-required-radio-group>
+                    <label><input type="radio" name="wipl_q1" value="Strongly Disagree" required /> Strongly Disagree</label>
+                    <label><input type="radio" name="wipl_q1" value="Disagree" /> Disagree</label>
+                    <label><input type="radio" name="wipl_q1" value="Neutral" /> Neutral</label>
+                    <label><input type="radio" name="wipl_q1" value="Agree" /> Agree</label>
+                    <label><input type="radio" name="wipl_q1" value="Strongly Agree" /> Strongly Agree</label>
+                  </div>
+                  <p class="error" data-error-for="wipl_q1"></p>
+                </div>
+                <div class="field">
+                  <label>I feel like I have to reply to work messages or emails even after hours. <span class="req">*</span></label>
+                  <div class="options options-inline" data-required-radio-group>
+                    <label><input type="radio" name="wipl_q2" value="Strongly Disagree" required /> Strongly Disagree</label>
+                    <label><input type="radio" name="wipl_q2" value="Disagree" /> Disagree</label>
+                    <label><input type="radio" name="wipl_q2" value="Neutral" /> Neutral</label>
+                    <label><input type="radio" name="wipl_q2" value="Agree" /> Agree</label>
+                    <label><input type="radio" name="wipl_q2" value="Strongly Agree" /> Strongly Agree</label>
+                  </div>
+                  <p class="error" data-error-for="wipl_q2"></p>
+                </div>
+                <div class="field">
+                  <label>Work is so fast-paced that I can’t fully relax after hours. <span class="req">*</span></label>
+                  <div class="options options-inline" data-required-radio-group>
+                    <label><input type="radio" name="wipl_q3" value="Strongly Disagree" required /> Strongly Disagree</label>
+                    <label><input type="radio" name="wipl_q3" value="Disagree" /> Disagree</label>
+                    <label><input type="radio" name="wipl_q3" value="Neutral" /> Neutral</label>
+                    <label><input type="radio" name="wipl_q3" value="Agree" /> Agree</label>
+                    <label><input type="radio" name="wipl_q3" value="Strongly Agree" /> Strongly Agree</label>
+                  </div>
+                  <p class="error" data-error-for="wipl_q3"></p>
+                </div>
+                <div class="field">
+                  <label>I am unhappy with the amount of time for non-work activities. <span class="req">*</span></label>
+                  <div class="options options-inline" data-required-radio-group>
+                    <label><input type="radio" name="wipl_q4" value="Strongly Disagree" required /> Strongly Disagree</label>
+                    <label><input type="radio" name="wipl_q4" value="Disagree" /> Disagree</label>
+                    <label><input type="radio" name="wipl_q4" value="Neutral" /> Neutral</label>
+                    <label><input type="radio" name="wipl_q4" value="Agree" /> Agree</label>
+                    <label><input type="radio" name="wipl_q4" value="Strongly Agree" /> Strongly Agree</label>
+                  </div>
+                  <p class="error" data-error-for="wipl_q4"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection" data-subsection>
+              <button type="button" class="subsection-title" data-toggle>2.2 Personal Life Interference with Work (PLIW)</button>
+              <div class="subsection-content">
+                <div class="illustration"><img src="resources/sec2.2.png" alt="Section 2.2" onerror="this.parentElement.style.display='none'" /></div>
+                <div class="field">
+                  <label>My personal life drains me of the energy I need for my work. <span class="req">*</span></label>
+                  <div class="options options-inline" data-required-radio-group>
+                    <label><input type="radio" name="pliw_q1" value="Strongly Disagree" required /> Strongly Disagree</label>
+                    <label><input type="radio" name="pliw_q1" value="Disagree" /> Disagree</label>
+                    <label><input type="radio" name="pliw_q1" value="Neutral" /> Neutral</label>
+                    <label><input type="radio" name="pliw_q1" value="Agree" /> Agree</label>
+                    <label><input type="radio" name="pliw_q1" value="Strongly Agree" /> Strongly Agree</label>
+                  </div>
+                  <p class="error" data-error-for="pliw_q1"></p>
+                </div>
+                <div class="field">
+                  <label>Distractions in my home environment during my work hours make it difficult to focus. <span class="req">*</span></label>
+                  <div class="options options-inline" data-required-radio-group>
+                    <label><input type="radio" name="pliw_q2" value="Strongly Disagree" required /> Strongly Disagree</label>
+                    <label><input type="radio" name="pliw_q2" value="Disagree" /> Disagree</label>
+                    <label><input type="radio" name="pliw_q2" value="Neutral" /> Neutral</label>
+                    <label><input type="radio" name="pliw_q2" value="Agree" /> Agree</label>
+                    <label><input type="radio" name="pliw_q2" value="Strongly Agree" /> Strongly Agree</label>
+                  </div>
+                  <p class="error" data-error-for="pliw_q2"></p>
+                </div>
+                <div class="field">
+                  <label>Because of personal commitments, I take part less in team communication or meetings. <span class="req">*</span></label>
+                  <div class="options options-inline" data-required-radio-group>
+                    <label><input type="radio" name="pliw_q3" value="Strongly Disagree" required /> Strongly Disagree</label>
+                    <label><input type="radio" name="pliw_q3" value="Disagree" /> Disagree</label>
+                    <label><input type="radio" name="pliw_q3" value="Neutral" /> Neutral</label>
+                    <label><input type="radio" name="pliw_q3" value="Agree" /> Agree</label>
+                    <label><input type="radio" name="pliw_q3" value="Strongly Agree" /> Strongly Agree</label>
+                  </div>
+                  <p class="error" data-error-for="pliw_q3"></p>
+                </div>
+                <div class="field">
+                  <label>I don’t spend much time with my teammates outside of work because of personal matters. <span class="req">*</span></label>
+                  <div class="options options-inline" data-required-radio-group>
+                    <label><input type="radio" name="pliw_q4" value="Strongly Disagree" required /> Strongly Disagree</label>
+                    <label><input type="radio" name="pliw_q4" value="Disagree" /> Disagree</label>
+                    <label><input type="radio" name="pliw_q4" value="Neutral" /> Neutral</label>
+                    <label><input type="radio" name="pliw_q4" value="Agree" /> Agree</label>
+                    <label><input type="radio" name="pliw_q4" value="Strongly Agree" /> Strongly Agree</label>
+                  </div>
+                  <p class="error" data-error-for="pliw_q4"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection" data-subsection>
+              <button type="button" class="subsection-title" data-toggle>2.3 Work/Personal Life Enhancement (WPLE)</button>
+              <div class="subsection-content">
+                <div class="illustration"><img src="resources/section2.3.png" alt="Section 2.3" onerror="this.parentElement.style.display='none'" /></div>
+                <div class="field">
+                  <label>I have enough control over my job to manage both work and personal life well. <span class="req">*</span></label>
+                  <div class="options options-inline" data-required-radio-group>
+                    <label><input type="radio" name="wple_q1" value="Strongly Disagree" required /> Strongly Disagree</label>
+                    <label><input type="radio" name="wple_q1" value="Disagree" /> Disagree</label>
+                    <label><input type="radio" name="wple_q1" value="Neutral" /> Neutral</label>
+                    <label><input type="radio" name="wple_q1" value="Agree" /> Agree</label>
+                    <label><input type="radio" name="wple_q1" value="Strongly Agree" /> Strongly Agree</label>
+                  </div>
+                  <p class="error" data-error-for="wple_q1"></p>
+                </div>
+                <div class="field">
+                  <label>The flexibility my job offers helps me manage personal responsibilities. <span class="req">*</span></label>
+                  <div class="options options-inline" data-required-radio-group>
+                    <label><input type="radio" name="wple_q2" value="Strongly Disagree" required /> Strongly Disagree</label>
+                    <label><input type="radio" name="wple_q2" value="Disagree" /> Disagree</label>
+                    <label><input type="radio" name="wple_q2" value="Neutral" /> Neutral</label>
+                    <label><input type="radio" name="wple_q2" value="Agree" /> Agree</label>
+                    <label><input type="radio" name="wple_q2" value="Strongly Agree" /> Strongly Agree</label>
+                  </div>
+                  <p class="error" data-error-for="wple_q2"></p>
+                </div>
+                <div class="field">
+                  <label>My personal life gives me energy for my job. <span class="req">*</span></label>
+                  <div class="options options-inline" data-required-radio-group>
+                    <label><input type="radio" name="wple_q3" value="Strongly Disagree" required /> Strongly Disagree</label>
+                    <label><input type="radio" name="wple_q3" value="Disagree" /> Disagree</label>
+                    <label><input type="radio" name="wple_q3" value="Neutral" /> Neutral</label>
+                    <label><input type="radio" name="wple_q3" value="Agree" /> Agree</label>
+                    <label><input type="radio" name="wple_q3" value="Strongly Agree" /> Strongly Agree</label>
+                  </div>
+                  <p class="error" data-error-for="wple_q3"></p>
+                </div>
+                <div class="field">
+                  <label>My job helps me feel energetic for my personal life too. <span class="req">*</span></label>
+                  <div class="options options-inline" data-required-radio-group>
+                    <label><input type="radio" name="wple_q4" value="Strongly Disagree" required /> Strongly Disagree</label>
+                    <label><input type="radio" name="wple_q4" value="Disagree" /> Disagree</label>
+                    <label><input type="radio" name="wple_q4" value="Neutral" /> Neutral</label>
+                    <label><input type="radio" name="wple_q4" value="Agree" /> Agree</label>
+                    <label><input type="radio" name="wple_q4" value="Strongly Agree" /> Strongly Agree</label>
+                  </div>
+                  <p class="error" data-error-for="wple_q4"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: The Modern Work Experience -->
+        <section class="section" data-section>
+          <button type="button" class="section-title" data-toggle>
+            Section 3: The Modern Work Experience
+          </button>
+          <div class="section-content">
+            <div class="illustration"><img src="resources/sec3.png" alt="Section 3" onerror="this.parentElement.style.display='none'" /></div>
+            <div class="field">
+              <label>AI tools help me work faster and improve my work-life balance. <span class="req">*</span></label>
+              <div class="options options-inline" data-required-radio-group>
+                <label><input type="radio" name="modern_aiTools" value="Not Applicable" required /> Not Applicable</label>
+                <label><input type="radio" name="modern_aiTools" value="Strongly Disagree" /> Strongly Disagree</label>
+                <label><input type="radio" name="modern_aiTools" value="Disagree" /> Disagree</label>
+                <label><input type="radio" name="modern_aiTools" value="Neutral" /> Neutral</label>
+                <label><input type="radio" name="modern_aiTools" value="Agree" /> Agree</label>
+                <label><input type="radio" name="modern_aiTools" value="Strongly Agree" /> Strongly Agree</label>
+              </div>
+              <p class="error" data-error-for="modern_aiTools"></p>
+            </div>
+            <div class="field">
+              <label>I feel pressured to work at the same time as my colleagues... <span class="req">*</span></label>
+              <div class="options options-inline" data-required-radio-group>
+                <label><input type="radio" name="modern_pressureSameTime" value="Not Applicable" required /> Not Applicable</label>
+                <label><input type="radio" name="modern_pressureSameTime" value="Strongly Disagree" /> Strongly Disagree</label>
+                <label><input type="radio" name="modern_pressureSameTime" value="Disagree" /> Disagree</label>
+                <label><input type="radio" name="modern_pressureSameTime" value="Neutral" /> Neutral</label>
+                <label><input type="radio" name="modern_pressureSameTime" value="Agree" /> Agree</label>
+                <label><input type="radio" name="modern_pressureSameTime" value="Strongly Agree" /> Strongly Agree</label>
+              </div>
+              <p class="error" data-error-for="modern_pressureSameTime"></p>
+            </div>
+            <div class="field">
+              <label>I feel comfortable talking to my manager if overwhelmed by work. <span class="req">*</span></label>
+              <div class="options options-inline" data-required-radio-group>
+                <label><input type="radio" name="modern_comfortManager" value="Not Applicable" required /> Not Applicable</label>
+                <label><input type="radio" name="modern_comfortManager" value="Strongly Disagree" /> Strongly Disagree</label>
+                <label><input type="radio" name="modern_comfortManager" value="Disagree" /> Disagree</label>
+                <label><input type="radio" name="modern_comfortManager" value="Neutral" /> Neutral</label>
+                <label><input type="radio" name="modern_comfortManager" value="Agree" /> Agree</label>
+                <label><input type="radio" name="modern_comfortManager" value="Strongly Agree" /> Strongly Agree</label>
+              </div>
+              <p class="error" data-error-for="modern_comfortManager"></p>
+            </div>
+            <div class="field">
+              <label>I find it difficult to "switch off" from work at the end of the day when WFH. <span class="req">*</span></label>
+              <div class="options options-inline" data-required-radio-group>
+                <label><input type="radio" name="modern_switchOff" value="Not Applicable" required /> Not Applicable</label>
+                <label><input type="radio" name="modern_switchOff" value="Strongly Disagree" /> Strongly Disagree</label>
+                <label><input type="radio" name="modern_switchOff" value="Disagree" /> Disagree</label>
+                <label><input type="radio" name="modern_switchOff" value="Neutral" /> Neutral</label>
+                <label><input type="radio" name="modern_switchOff" value="Agree" /> Agree</label>
+                <label><input type="radio" name="modern_switchOff" value="Strongly Agree" /> Strongly Agree</label>
+              </div>
+              <p class="error" data-error-for="modern_switchOff"></p>
+            </div>
+            <div class="field">
+              <label>Working remotely makes me feel socially disconnected. <span class="req">*</span></label>
+              <div class="options options-inline" data-required-radio-group>
+                <label><input type="radio" name="modern_disconnected" value="Not Applicable" required /> Not Applicable</label>
+                <label><input type="radio" name="modern_disconnected" value="Strongly Disagree" /> Strongly Disagree</label>
+                <label><input type="radio" name="modern_disconnected" value="Disagree" /> Disagree</label>
+                <label><input type="radio" name="modern_disconnected" value="Neutral" /> Neutral</label>
+                <label><input type="radio" name="modern_disconnected" value="Agree" /> Agree</label>
+                <label><input type="radio" name="modern_disconnected" value="Strongly Agree" /> Strongly Agree</label>
+              </div>
+              <p class="error" data-error-for="modern_disconnected"></p>
+            </div>
+            <div class="field">
+              <label>The digital tools and platforms help me collaborate effectively. <span class="req">*</span></label>
+              <div class="options options-inline" data-required-radio-group>
+                <label><input type="radio" name="modern_toolsCollaborate" value="Not Applicable" required /> Not Applicable</label>
+                <label><input type="radio" name="modern_toolsCollaborate" value="Strongly Disagree" /> Strongly Disagree</label>
+                <label><input type="radio" name="modern_toolsCollaborate" value="Disagree" /> Disagree</label>
+                <label><input type="radio" name="modern_toolsCollaborate" value="Neutral" /> Neutral</label>
+                <label><input type="radio" name="modern_toolsCollaborate" value="Agree" /> Agree</label>
+                <label><input type="radio" name="modern_toolsCollaborate" value="Strongly Agree" /> Strongly Agree</label>
+              </div>
+              <p class="error" data-error-for="modern_toolsCollaborate"></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4: Final Report -->
+        <section class="section" data-section>
+          <button type="button" class="section-title" data-toggle>
+            Section 4: Final Report
+          </button>
+          <div class="section-content">
+            <div class="notice" id="emailInfo">
+              <p>🛡️ <strong>Privacy Reminder:</strong> As mentioned, your email address will be used only for sending you the report. It will be kept completely separate from your anonymous survey answers.</p>
+            </div>
+            <div class="field">
+              <label>Would you like to receive the final analysis report when ready? <span class="req">*</span></label>
+              <div class="options" data-required-radio-group>
+                <label><input type="radio" name="final_receiveReport" value="Yes" required /> Yes</label>
+                <label><input type="radio" name="final_receiveReport" value="No" /> No</label>
+              </div>
+              <p class="error" data-error-for="final_receiveReport"></p>
+            </div>
+            <div class="field" id="emailField" hidden>
+              <label for="email">Please provide your email address:</label>
+              <input type="email" id="email" name="final_email" placeholder="name@example.com" />
+              <p class="error" data-error-for="email"></p>
+            </div>
+          </div>
+        </section>
+
+        <div class="actions">
+          <button type="submit" class="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="public/config.js"></script>
+    <script src="public/main.js"></script>
+  </body>
+  </html>
+
+
