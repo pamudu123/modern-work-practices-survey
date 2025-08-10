@@ -177,6 +177,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('surveyForm');
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalDisabled = submitButton.disabled;
+    const originalLabel = submitButton.querySelector('.btn-label');
+    // guard in case structure changes
+    const labelEl = originalLabel || submitButton;
+    function startLoading(){
+      submitButton.classList.add('loading');
+      submitButton.disabled = true;
+    }
+    function stopLoading(){
+      submitButton.classList.remove('loading');
+      submitButton.disabled = originalDisabled || false;
+    }
     if (!validateForm(form)) {
       // expand any collapsed containers with missing answers
       document.querySelectorAll('.highlight-missing').forEach(el => {
@@ -234,6 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     try {
+      startLoading();
       const res = await fetch(window.APPS_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
@@ -241,10 +255,14 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify(renamed)
       });
       // With no-cors we cannot read status; navigate optimistically
-      window.location.href = 'thankyou.html';
+      // slight delay to allow spinner to be perceptible if very fast
+      setTimeout(() => { window.location.href = 'thankyou.html'; }, 300);
     } catch (err) {
       console.error(err);
       alert('Failed to submit. Please try again later.');
+    } finally {
+      // If navigation happens, this won't run; otherwise ensure UI resets
+      stopLoading();
     }
   });
 
