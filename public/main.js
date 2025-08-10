@@ -185,7 +185,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const subsection = findAncestor(el, '[data-subsection]');
         if (subsection) subsection.classList.remove('collapsed');
       });
-      alert('Please complete all required questions.');
+      // If only the email format is invalid and everything else is answered, show a specific message
+      const emailInput = form.querySelector('#email');
+      const emailErr = form.querySelector('[data-error-for="email"]');
+      const otherErrors = Array.from(form.querySelectorAll('.error'))
+        .filter(e => e.textContent && e.getAttribute('data-error-for') !== 'email');
+      if (emailInput && emailInput.value && !isValidEmail(emailInput.value) && otherErrors.length === 0) {
+        alert('There is an error in the email address. Please enter a valid email.');
+      } else {
+        alert('Please complete all required questions.');
+      }
       return;
     }
 
