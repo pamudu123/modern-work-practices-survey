@@ -14,7 +14,7 @@ Responses are anonymous. If you opt in to receive the final report, your email i
 ## Privacy
 - Responses are stored for analysis in aggregate; individual responses are not published.
 - Email is optional and requested only if you choose to receive the final report.
-- Optional emails are stored separately from survey responses and are not used for marketing or shared with third parties.
+- Optional email addresses are not used for marketing or shared with third parties..
 
 ## Preview
 
